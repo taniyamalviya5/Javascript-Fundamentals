@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>
+        Skip Multiple of 3
+    </title>
+    <script type="text/javascript">
+        var num = +prompt("Enter the number: ");
+
+        // for loop
+        for (var i = 1; i <= num; i++) {
+            if (i % 3 === 0) {
+                continue;
+            }
+            document.write("Number is: " + i + "<br/>");
+        }
+
+
+        // while loop
+        document.write("While loop <br/>");
+
+        var i = 0;
+
+        while (i <= num) {
+            i++;
+
+            if (i % 3 == 0) {
+                continue;
+            }
+
+            document.write("Number is: " + i + "<br/>");
+        }
+
+        // do-while loop
+        document.write("Do-While loop <br/>");
+
+        var j = 0;
+
+        do {
+            j++;
+
+            if (j % 3 == 0) {
+                continue;
+            }
+
+            document.write("Number is: " + j + "<br/>");
+        } while (j <= num);
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
