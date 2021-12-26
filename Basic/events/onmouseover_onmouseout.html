@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>onmouseover/mouseout</title>
+    <script>
+        function handleOnMouseDownEvent(x) {
+            cnsole.log(x);
+            x.style.color = "red";
+            x.style.backgroundColor = "yellow";
+            x.innerHTML = "MOUSEDOWN";
+        }
+        function handleOnMouseUpEvent(y) {
+            y.style.color = "yellow";
+            y.style.backgroundColor = "blue";
+            y.innerHTML = "MOUSEUP";
+        }
+    </script>
+</head>
+
+<body>
+    <marquee onmouseover="stop()" onmouseout="start()">Start/Stop</marquee>
+
+    <p onmousedown="handleOnMouseDownEvent(this)" onmouseup="handleOnMouseUpEvent(this)">
+        Mouse Down / Mouse Up</p>
+</body>
+
+</html>
