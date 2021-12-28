@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>onFocus onBlur</title>
+    <script>
+        function handleOnFocus(x) {
+            x.style.color = "blue";
+            x.style.backgroundColor = "red";
+        }
+
+        function handleOnBlur(x) {
+            x.style.color = "red";
+            x.style.backgroundColor = "blue";
+        }
+
+        function handleOnkeydownfn(x) {
+            x.style.backgroundColor = "pink";
+            x.style.color = "black";
+        }
+
+        function handleOnkeyupfn(x) {
+            x.style.backgroundColor = "black";
+            x.style.color = "pink";
+        }
+
+        function handleOnkeypressfn(x) {
+            x.style.backgroundColor = "green";
+            x.style.color = "white";
+        }
+    </script>
+</head>
+
+<body>
+    <input type="text" style="height: 50px; width: 50%; font-size: 28px;" onfocus=" handleOnFocus(this)"
+        onblur="handleOnBlur(this)" onkeydown="handleOnkeydownfn(this)" onkeyup="handleOnkeyupfn(this)"
+        onkeypress="handleOnkeypressfn(this)" />
+</body>
+
+</html>
