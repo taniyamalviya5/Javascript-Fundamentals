@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete/Replace</title>
+    <script>
+
+        function continuousDisplay() {
+            // setTimneout: once
+            setInterval(displayDate, 1000);
+            //clearInterval
+        }
+
+        function displayDate() {
+            var d = new Date();
+            var x = d.toLocaleTimeString(); // for print only time
+            var y = d.toLocaleDateString(); // for print only date
+            var newDate = d.toLocaleString();
+            document.getElementById('dateinfo').innerHTML = x + "<br/>" + y + "<br/>" + newDate;
+        }
+    </script>
+</head>
+
+<body onload="continuousDisplay()">
+    Current Date:
+    <p id="dateinfo"></p>
+</body>
+
+</html>
