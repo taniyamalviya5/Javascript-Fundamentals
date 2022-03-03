@@ -1,0 +1,40 @@
+<html>
+
+<head>
+    <title>
+        Navigator
+    </title>
+    <script>
+        document.write("App Name: ", navigator.appName + "<br/>");
+        document.write("App Code Name: ", navigator.appCodeName + "<br/>");
+        document.write("App Cookies Enabled: ", navigator.cookieEnabled + "<br/>");
+
+        let batteryIsCharging = false;
+
+        navigator.getBattery().then(function (battery) {
+            batteryIsCharging = battery.charging;
+
+            battery.onlevelchange = function () {
+                document.write("Batterey level:", (battery.level / 10)) + "%<br/>";
+
+                if (battery.charging) {
+                    document.write(
+                        "Charging time: " + (battery.chargingTime / 60));
+                }
+                else {
+                    document.write(
+                        "Discharging time: " + (battery.dischargingTime / 60));
+                }
+            };
+        });
+
+        for (x in navigator) {
+            document.write(x + ": " + navigator[x] + "<br/>");
+        }
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
