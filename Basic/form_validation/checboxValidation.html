@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>
+        Dropdown Selection
+    </title>
+    <script>
+        function validate() {
+            var isValid = false;
+
+            if (document.getElementById('javascript').checked) {
+                isValid = true;
+            }
+            else if (document.getElementById('javascript').checked) {
+                isValid = true;
+            }
+            else if (document.getElementById('jquery').checked) {
+                isValid = true;
+            }
+            else if (document.getElementById('angularjs').checked) {
+                isValid = true;
+            }
+            else if (document.getElementById('nodejs').checked) {
+                isValid = true;
+            }
+            if (isValid) {
+                alert('Validation Successful');
+            } else {
+                alert("Please select atleast one technology");
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h3>Select a color:</h3>
+    <form name="myform" action="dropdown.jsp" onsubmit="return validate()">
+        <input type="checkbox" id="javascript" value="Javascript" />Javascript
+        <input type="checkbox" id="jquery" value="Jquery" />JQuery
+        <input type="checkbox" id="angularjs" value="AngularJS" />AngularJS
+        <input type="checkbox" id="nodejs" value="NodeJS" />Node JS
+
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>
