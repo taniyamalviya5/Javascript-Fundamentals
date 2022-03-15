@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        Text field validation using regex
+    </title>
+    <script>
+        function validate() {
+           var exp = /^[A-Za-z]+$/;
+           var userName = document.myform.uname.value;
+           var result = exp.test(userName);
+
+           if(result){
+               alert("Validation successful");
+           } else {
+               alert("Validation failed");
+               document.myform.uname.focus();
+               return false;
+           }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="dropdown.jsp" onsubmit="return validate()">
+        User Name: <input type="Text" name="uname" />
+        
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>

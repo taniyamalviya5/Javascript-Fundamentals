@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        Text field validation using regex
+    </title>
+    <script>
+        function validate() {
+           var exp = /^[A-Za-z0-9\s]+$/;
+           var address = document.myform.address.value;
+           var result = exp.test(address);
+
+           if(result){
+               alert("Validation successful");
+           } else {
+               document.getElementById('err').innerHTML = "Please enter alpha numeric.";
+               document.myform.address.focus();
+               return false;
+           }
+        }
+    </script>
+</head>
+
+<body>
+    <form name="myform" action="dropdown.jsp" onsubmit="return validate()">
+        Address: <textarea name="address"></textarea><br />
+        <b id="err"></b><br/>
+        <input type="submit" value="submit" />
+    </form>
+</body>
+
+</html>
