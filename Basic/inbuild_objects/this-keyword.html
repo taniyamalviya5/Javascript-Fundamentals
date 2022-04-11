@@ -1,0 +1,37 @@
+<html>
+
+<head>
+    <title>This Keyword with Object and Function</title>
+</head>
+
+<body>
+    <b><code>this</code> keyword</b><br />
+
+    <code>this</code> is a global scope to the global runtime and not to this object. For use the this keyword in the
+    object, we either have to use the standar function <code>function (){}</code> or use without function keyword
+    <code>functionName(){}</code>.<br />
+
+    Function Keyword
+    <code>
+    const person = {
+        name: 'Taniya',
+        age: 27,
+        getName: function () {
+            console.log("Hi, I am", this.name);
+        }
+    }
+    </code> <br />
+
+    Without function Keyword and arrow
+    <code>
+    const person = {
+        name: 'Taniya',
+        age: 27,
+        getName() {
+            console.log("Hi, I am", this.name);
+        }
+    }   
+    </code>
+</body>
+
+</html>
